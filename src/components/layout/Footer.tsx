@@ -33,7 +33,7 @@ export default function Footer() {
                         <Link href="/experiences" className="footer-link inline-flex items-center gap-2"><Sparkles className="w-3.5 h-3.5" /><span>Experiences</span></Link>
                         <Link href="/fleet" className="footer-link inline-flex items-center gap-2"><Ship className="w-3.5 h-3.5" /><span>Fleet</span></Link>
                         {/* <Link href="/occasions/weddings" className="footer-link inline-flex items-center gap-2"><CalendarDays className="w-3.5 h-3.5" /><span>Occasions</span></Link> */}
-                        <a href="#" className="footer-link inline-flex items-center gap-2"><Instagram className="w-3.5 h-3.5" /><span>Instagram</span></a>
+                        <a href="https://www.instagram.com/yachtclubindia_?igsh=MXhqemkzeWk5OXRkNA%3D%3D" target="_blank" rel="noopener noreferrer" className="footer-link inline-flex items-center gap-2"><Instagram className="w-3.5 h-3.5" /><span>Instagram</span></a>
                         <a href="https://wa.me/918147331594" target="_blank" rel="noopener noreferrer" className="footer-link inline-flex items-center gap-2"><MessageCircle className="w-3.5 h-3.5" /><span>WhatsApp</span></a>
                     </div>
                 </div>
@@ -41,7 +41,7 @@ export default function Footer() {
             <div className="footer-bottom mx-auto mt-10 max-w-7xl border-t border-white/12 px-6 pt-6 text-xs text-textMuted">
                 <p>© {new Date().getFullYear()} Yacht Club India. All rights reserved.</p>
                 <div className="footer-social flex items-center gap-3">
-                    <a href="#" className="social-link" aria-label="Instagram"><Instagram /></a>
+                    <a href="https://www.instagram.com/yachtclubindia_?igsh=MXhqemkzeWk5OXRkNA%3D%3D" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="Instagram"><Instagram /></a>
                     <a href="#" className="social-link" aria-label="Facebook"><Facebook /></a>
                     <a href="#" className="social-link" aria-label="YouTube"><Youtube /></a>
                 </div>
