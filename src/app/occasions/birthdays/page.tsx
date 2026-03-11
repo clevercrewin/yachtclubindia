@@ -115,7 +115,7 @@ export default function BirthdaysPage() {
                             <p className="luxe-cta-kicker">Birthday Concierge</p>
                             <h3 className="luxe-cta-title">Plan Your Celebration on the Sea</h3>
                         </div>
-                        <Button href="/booking" variant="gold" icon={Anchor} className="luxe-cta-btn text-white" style={{ background: '#102A47', borderColor: 'rgba(9, 25, 45, 0.35)' }}>
+                        <Button href="/fleet" variant="gold" icon={Anchor} className="luxe-cta-btn text-white" style={{ background: '#102A47', borderColor: 'rgba(9, 25, 45, 0.35)' }}>
                             Book a Yacht
                         </Button>
                     </div>

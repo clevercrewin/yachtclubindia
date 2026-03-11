@@ -115,7 +115,7 @@ export default function RomanticGetawaysPage() {
                             <p className="luxe-cta-kicker">Private Romantic Getaway Planning</p>
                             <h3 className="luxe-cta-title">Reserve Your Romantic Getaway Date</h3>
                         </div>
-                        <Button href="/booking" variant="gold" icon={Anchor} className="luxe-cta-btn text-white" style={{ background: '#102A47', borderColor: 'rgba(9, 25, 45, 0.35)' }}>
+                        <Button href="/fleet" variant="gold" icon={Anchor} className="luxe-cta-btn text-white" style={{ background: '#102A47', borderColor: 'rgba(9, 25, 45, 0.35)' }}>
                             Book a Yacht
                         </Button>
                     </div>

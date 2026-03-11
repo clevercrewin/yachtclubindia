@@ -75,7 +75,7 @@ export default function ExperiencesPage() {
                         From private escapes to iconic celebrations, every route, setup, and onboard touchpoint is tailored for a premium Goa-at-sea experience.
                     </p>
                     <div className="mt-8 flex flex-wrap gap-4">
-                        <Button href="/booking" variant="gold" icon={Anchor}>Book Experience</Button>
+                        <Button href="/fleet" variant="gold" icon={Anchor}>Book Experience</Button>
                         <Button href="#occasions-grid" variant="outline" icon={Compass}>Explore Occasions</Button>
                     </div>
                 </div>
@@ -143,7 +143,7 @@ export default function ExperiencesPage() {
                             <p className="luxe-cta-kicker">Ready to Sail</p>
                             <h3 className="luxe-cta-title">Reserve Your Preferred Experience Today</h3>
                         </div>
-                        <Button href="/booking" variant="gold" icon={Anchor} className="luxe-cta-btn text-white" style={{ background: '#102A47', borderColor: 'rgba(9, 25, 45, 0.35)' }}>
+                        <Button href="/fleet" variant="gold" icon={Anchor} className="luxe-cta-btn text-white" style={{ background: '#102A47', borderColor: 'rgba(9, 25, 45, 0.35)' }}>
                             Book a Yacht
                         </Button>
                     </div>

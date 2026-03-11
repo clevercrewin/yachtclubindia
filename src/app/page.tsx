@@ -39,7 +39,7 @@ function HeroSection() {
           </p>
 
           <div className="mt-10 flex flex-wrap gap-4">
-            <Button href="/booking" variant="gold" icon={Anchor}>Book Now</Button>
+            <Button href="/fleet" variant="gold" icon={Anchor}>Book Now</Button>
             <Button href="#" variant="outline" icon={MessageCircle}>Chat on WhatsApp</Button>
           </div>
           <p className="mt-4 text-sm text-[#C4D0DD]">Starting from ₹7,500 / hour</p>
@@ -328,7 +328,7 @@ function FAQSection() {
             <h3 className="mt-2 font-heading text-2xl">Reserve Your Yacht Experience in Goa</h3>
           </div>
           <div className="mt-6 flex flex-wrap gap-3 lg:mt-0">
-            <Button href="/booking" variant="gold" icon={Anchor}>Book Now</Button>
+            <Button href="/fleet" variant="gold" icon={Anchor}>Book Now</Button>
             <Button href="#" variant="outline" icon={MessageCircle}>Chat</Button>
           </div>
         </div>
