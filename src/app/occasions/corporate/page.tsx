@@ -45,7 +45,7 @@ export default function CorporatePage() {
                     fill
                     sizes="100vw"
                     priority
-                    className="occasion-page-hero-bg object-fill"
+                    className="occasion-page-hero-bg object-cover"
                 />
                 <div className="occasion-page-hero-overlay"></div>
                 <div className="relative mx-auto max-w-7xl px-6 py-24 sm:py-28 lg:py-36" data-reveal="true">

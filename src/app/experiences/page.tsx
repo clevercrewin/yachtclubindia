@@ -65,7 +65,7 @@ export default function ExperiencesPage() {
                     fill
                     sizes="100vw"
                     priority
-                    className="experience-page-hero-bg object-fill"
+                    className="experience-page-hero-bg object-cover"
                 />
                 <div className="experience-page-hero-overlay"></div>
                 <div className="relative mx-auto max-w-7xl px-6 py-24 sm:py-28 lg:py-36" data-reveal="true">

@@ -197,7 +197,7 @@ export default function CheckoutPage() {
                                     <div className="flex gap-4 sm:gap-6 flex-1">
                                         {/* Yacht Image */}
                                         <div className="relative w-24 h-24 sm:w-32 sm:h-24 rounded-xl overflow-hidden shrink-0 border border-black/5">
-                                            <Image src={yacht.image} alt={yacht.title} fill className="object-fill" />
+                                            <Image src={yacht.image} alt={yacht.title} fill className="object-cover" />
                                         </div>
 
                                         {/* Yacht Info */}
@@ -326,7 +326,7 @@ export default function CheckoutPage() {
                             {yacht && (
                                 <div className="flex gap-4 mb-5 pb-5 border-b border-white/10">
                                     <div className="relative w-16 h-14 rounded-lg overflow-hidden shrink-0">
-                                        <Image src={yacht.image} alt={yacht.title} fill className="object-fill" />
+                                        <Image src={yacht.image} alt={yacht.title} fill className="object-cover" />
                                     </div>
                                     <div className="flex-1 min-w-0">
                                         <p className="font-bold text-sm">{yacht.title}</p>

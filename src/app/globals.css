@@ -616,7 +616,7 @@ main>section:first-of-type .btn-outline:hover {
 .image-ph img {
   width: 100%;
   height: 100%;
-  object-fit: fill;
+  object-fit: cover;
   display: block;
 }
 
@@ -2417,4 +2417,22 @@ main>section:first-of-type .btn-outline:hover {
   .occasion-package-grid {
     grid-template-columns: 1fr;
   }
+}
+
+/* Hero Button Visibility Fix */
+.hero-btn-outline {
+  border-color: rgba(255, 255, 255, 0.3) !important;
+  background: rgba(255, 255, 255, 0.05) !important;
+  color: #ffffff !important;
+  backdrop-filter: blur(4px);
+}
+
+.hero-btn-outline:hover {
+  background: rgba(255, 255, 255, 0.15) !important;
+  border-color: rgba(255, 255, 255, 0.6) !important;
+  color: #ffffff !important;
+}
+
+.hero-btn-outline svg {
+  color: #ffffff !important;
 }
