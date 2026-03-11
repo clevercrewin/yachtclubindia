@@ -79,7 +79,7 @@ export default function Header() {
 
                     <div className="hidden items-center gap-3 lg:flex">
                         <Link href="/fleet" className="btn-gold btn-icon"><Anchor /><span>Book Now</span></Link>
-                        <a href="#" className="btn-outline btn-icon"><MessageCircle /><span>Chat with us</span></a>
+                        <a href="https://wa.me/918147331594" target="_blank" rel="noopener noreferrer" className="btn-outline btn-icon"><MessageCircle /><span>Chat with us</span></a>
                     </div>
 
                     <div className="flex items-center gap-2 lg:hidden">
@@ -130,7 +130,7 @@ export default function Header() {
                         <Link className="mobile-link" href="/#contact" onClick={closeMenu}>Contact</Link>
                         <div className="mt-4 grid grid-cols-2 gap-3">
                             <Link href="/fleet" className="btn-gold btn-icon text-center" onClick={closeMenu}><Anchor /><span>Book Now</span></Link>
-                            <a href="#" className="btn-outline btn-icon text-center"><MessageCircle /><span>Chat</span></a>
+                            <a href="https://wa.me/918147331594" target="_blank" rel="noopener noreferrer" className="btn-outline btn-icon text-center"><MessageCircle /><span>Chat</span></a>
                         </div>
                     </div>
                 </div>

@@ -40,7 +40,7 @@ function HeroSection() {
 
           <div className="mt-10 flex flex-wrap gap-4">
             <Button href="/fleet" variant="gold" icon={Anchor}>Book Now</Button>
-            <Button href="#" variant="outline" icon={MessageCircle}>Chat on WhatsApp</Button>
+            <Button href="https://wa.me/918147331594" variant="outline" icon={MessageCircle}>Chat on WhatsApp</Button>
           </div>
           <p className="mt-4 text-sm text-[#C4D0DD]">Starting from ₹7,500 / hour</p>
         </div>
@@ -329,7 +329,7 @@ function FAQSection() {
           </div>
           <div className="mt-6 flex flex-wrap gap-3 lg:mt-0">
             <Button href="/fleet" variant="gold" icon={Anchor}>Book Now</Button>
-            <Button href="#" variant="outline" icon={MessageCircle}>Chat</Button>
+            <Button href="https://wa.me/918147331594" variant="outline" icon={MessageCircle}>Chat</Button>
           </div>
         </div>
       </div>

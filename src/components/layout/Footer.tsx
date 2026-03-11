@@ -23,8 +23,8 @@ export default function Footer() {
                 </div>
                 <div>
                     <h4 className="footer-title">For Bookings</h4>
-                    <p className="footer-copy">+91 ________</p>
-                    <p className="footer-copy">+91 ________</p>
+                    <p className="footer-copy">+91 81473 31594</p>
+                    <p className="footer-copy">+91 81473 31594</p>
                     <p className="footer-copy">hello@yachtclubindia.com</p>
                     <p className="footer-copy">Brittona Jetty, Panjim, Goa</p>
                 </div>
@@ -35,7 +35,7 @@ export default function Footer() {
                         <Link href="/fleet" className="footer-link inline-flex items-center gap-2"><Ship className="w-3.5 h-3.5" /><span>Fleet</span></Link>
                         {/* <Link href="/occasions/weddings" className="footer-link inline-flex items-center gap-2"><CalendarDays className="w-3.5 h-3.5" /><span>Occasions</span></Link> */}
                         <a href="#" className="footer-link inline-flex items-center gap-2"><Instagram className="w-3.5 h-3.5" /><span>Instagram</span></a>
-                        <a href="#" className="footer-link inline-flex items-center gap-2"><MessageCircle className="w-3.5 h-3.5" /><span>WhatsApp</span></a>
+                        <a href="https://wa.me/918147331594" target="_blank" rel="noopener noreferrer" className="footer-link inline-flex items-center gap-2"><MessageCircle className="w-3.5 h-3.5" /><span>WhatsApp</span></a>
                     </div>
                 </div>
             </div>

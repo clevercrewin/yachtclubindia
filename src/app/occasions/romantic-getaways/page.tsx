@@ -96,11 +96,11 @@ export default function RomanticGetawaysPage() {
                     <h2 className="section-title text-white">Get in Touch</h2>
                     <p className="section-subtitle" style={{ color: 'rgba(255,255,255,0.7)' }}>Have questions or ready to plan your romantic getaway at sea? Reach out to us directly.</p>
                     <div className="contact-cta-actions mt-10">
-                        <a href="tel:+91________" className="contact-cta-btn">
+                        <a href="tel:+918147331594" className="contact-cta-btn">
                             <Phone className="w-5 h-5" />
                             <span>+91 ________</span>
                         </a>
-                        <a href="#" className="contact-cta-btn whatsapp">
+                        <a href="https://wa.me/918147331594" className="contact-cta-btn whatsapp">
                             <MessageCircle className="w-5 h-5" />
                             <span>Chat on WhatsApp</span>
                         </a>
