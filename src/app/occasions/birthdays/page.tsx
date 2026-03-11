@@ -98,7 +98,7 @@ export default function BirthdaysPage() {
                     <div className="contact-cta-actions mt-10">
                         <a href="tel:+918147331594" className="contact-cta-btn">
                             <Phone className="w-5 h-5" />
-                            <span>+91 ________</span>
+                            <span>+91 81473 31594</span>
                         </a>
                         <a href="https://wa.me/918147331594" className="contact-cta-btn whatsapp">
                             <MessageCircle className="w-5 h-5" />
