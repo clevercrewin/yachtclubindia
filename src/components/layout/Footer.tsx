@@ -24,7 +24,6 @@ export default function Footer() {
                 <div>
                     <h4 className="footer-title">For Bookings</h4>
                     <p className="footer-copy">+91 81473 31594</p>
-                    <p className="footer-copy">+91 81473 31594</p>
                     <p className="footer-copy">hello@yachtclubindia.com</p>
                     <p className="footer-copy">Brittona Jetty, Panjim, Goa</p>
                 </div>
