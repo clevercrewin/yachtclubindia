@@ -1,15 +1,14 @@
 import React from 'react';
 import Image from 'next/image';
-import { ArrowUpRight } from 'lucide-react';
 
 interface ExperienceCardProps {
     title: string;
     description: string;
-    price: string;
+    price?: string;
     image: string;
 }
 
-export function ExperienceCard({ title, description, price, image }: ExperienceCardProps) {
+export function ExperienceCard({ title, description, image }: ExperienceCardProps) {
     return (
         <article className="exp-card">
             <div className="image-ph exp-image">
@@ -17,13 +16,6 @@ export function ExperienceCard({ title, description, price, image }: ExperienceC
             </div>
             <h3 className="card-title">{title}</h3>
             <p className="card-copy">{description}</p>
-            <div className="meta-row">
-                <p className="card-meta">{price}</p>
-                <button className="enquire-chip btn-icon">
-                    <span>Enquire</span>
-                    <ArrowUpRight className="w-3 h-3" />
-                </button>
-            </div>
         </article>
     );
 }

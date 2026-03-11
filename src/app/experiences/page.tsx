@@ -3,16 +3,44 @@
 import { useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Anchor, Compass, ShieldCheck, Sparkles, Clock3 } from 'lucide-react';
+import { Anchor, Compass, ShieldCheck, Sparkles, Clock3, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { SectionTitle } from '@/components/ui/SectionTitle';
-import { ExperienceGridCard } from '@/components/ui/ExperienceGridCard';
 
-import experiencesData from '@/data/experiences.json';
+const occasions = [
+    {
+        title: 'Proposals',
+        image: '/images/s1.jpg',
+        href: '/occasions/proposals',
+        description: 'Create an unforgettable moment on the sea — private yacht setups designed for the perfect "yes" with curated decor, music, and ambience.',
+    },
+    {
+        title: 'Birthdays',
+        image: '/images/s2.jpg',
+        href: '/occasions/birthdays',
+        description: 'Celebrate your special day with exclusive yacht parties, personalised themes, onboard catering, and stunning coastal views.',
+    },
+    {
+        title: 'Romantic Getaways',
+        image: '/images/s3.jpg',
+        href: '/occasions/romantic-getaways',
+        description: 'Escape to the sea for an intimate cruise — sunset sails, candlelit dinners, and private moments crafted for two.',
+    },
+    {
+        title: 'Weddings',
+        image: '/images/s4.jpg',
+        href: '/occasions/weddings',
+        description: 'Say "I do" on the Arabian Sea with bespoke wedding charters — luxe décor, photography-ready backdrops, and full-service hosting.',
+    },
+    {
+        title: 'Corporate Events',
+        image: '/images/s5.jpg',
+        href: '/occasions/corporate',
+        description: 'Impress clients and reward teams with premium yacht hosting — ideal for offsites, networking events, and executive retreats.',
+    },
+];
 
 export default function ExperiencesPage() {
     useEffect(() => {
-        // Basic Intersection Observer for reveal animation
         const revealEls = document.querySelectorAll('[data-reveal]');
         const io = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
@@ -48,27 +76,37 @@ export default function ExperiencesPage() {
                     </p>
                     <div className="mt-8 flex flex-wrap gap-4">
                         <Button href="/booking" variant="gold" icon={Anchor}>Book Experience</Button>
-                        <Button href="#experiences-grid" variant="outline" icon={Compass}>Explore Options</Button>
+                        <Button href="#occasions-grid" variant="outline" icon={Compass}>Explore Occasions</Button>
                     </div>
                 </div>
             </section>
 
-            {/* Experiences Grid */}
-            <section id="experiences-grid" className="section-surface py-24">
+            {/* Occasions at Sea Grid */}
+            <section id="occasions-grid" className="section-surface py-24">
                 <div className="mx-auto max-w-7xl px-6">
                     <div className="mb-12" data-reveal="true">
-                        <h2 className="section-title">Experience Collection</h2>
-                        <p className="section-subtitle">Discover our most requested yacht experiences, each designed with concierge-level planning and polished onboard hospitality.</p>
+                        <h2 className="section-title">Occasions at Sea</h2>
+                        <p className="section-subtitle">From dreamy proposals to corporate excellence — explore our curated yacht experiences designed for life&apos;s finest moments.</p>
                     </div>
 
                     <div className="experience-grid" data-reveal="true">
-                        {experiencesData.map((exp, index) => (
-                            <ExperienceGridCard
-                                key={exp.id}
-                                {...exp}
-                                featured={index === 0}
-                                label={index === 0 ? "Most Booked" : undefined}
-                            />
+                        {occasions.map((occ, idx) => (
+                            <article key={idx} className={`experience-card ${idx === 0 ? 'featured' : ''}`}>
+                                <div className="experience-card-media">
+                                    <Image src={occ.image} alt={occ.title} fill sizes="(max-width: 768px) 100vw, 400px" className="object-cover" />
+                                </div>
+                                <div className="experience-card-body">
+                                    {idx === 0 && <p className="experience-card-label">Most Popular</p>}
+                                    <h3>{occ.title}</h3>
+                                    <p>{occ.description}</p>
+                                    <div className="experience-card-meta">
+                                        <Link href={occ.href} className="occasion-card-link">
+                                            <span>View More</span>
+                                            <ArrowRight className="w-4 h-4" />
+                                        </Link>
+                                    </div>
+                                </div>
+                            </article>
                         ))}
                     </div>
                 </div>

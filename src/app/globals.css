@@ -555,6 +555,13 @@ main>section:first-of-type .btn-outline:hover {
   transform: translateY(-3px);
 }
 
+/* When exp-card is used inside a CSS grid (e.g. experiences page), let it fill the column */
+.grid > .exp-card {
+  width: auto;
+  flex: unset;
+  scroll-snap-align: unset;
+}
+
 .fleet-card {
   border-radius: 1rem;
   border: 1px solid rgba(16, 35, 61, 0.08);
@@ -838,6 +845,235 @@ main>section:first-of-type .btn-outline:hover {
   border-color: rgba(194, 136, 76, 0.45);
   background: rgba(246, 226, 203, 0.92);
 }
+
+/* Occasion Card (structured card for experiences page) */
+.occasion-card {
+  border-radius: 1rem;
+  border: 1px solid rgba(16, 35, 61, 0.1);
+  background: var(--bg-card);
+  overflow: hidden;
+  transition: transform 320ms ease, border-color 320ms ease, box-shadow 320ms ease;
+}
+
+.occasion-card:hover {
+  border-color: rgba(200, 164, 93, 0.6);
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px rgba(10, 28, 48, 0.12), 0 4px 12px rgba(200, 164, 93, 0.1);
+}
+
+.occasion-card-media {
+  position: relative;
+  height: 14rem;
+  overflow: hidden;
+}
+
+.occasion-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 480ms ease;
+}
+
+.occasion-card:hover .occasion-card-media img {
+  transform: scale(1.06);
+}
+
+.occasion-card-body {
+  padding: 1.4rem 1.5rem 1.6rem;
+}
+
+.occasion-card-body h3 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.22rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  color: #122a43;
+  margin-bottom: 0.55rem;
+}
+
+.occasion-card-body p {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  line-height: 1.65;
+  margin-bottom: 1.1rem;
+}
+
+.occasion-card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--gold);
+  transition: gap 240ms ease, color 240ms ease;
+}
+
+.occasion-card-link .lucide,
+.occasion-card-link svg {
+  width: 15px;
+  height: 15px;
+  stroke-width: 2.2;
+  transition: transform 240ms ease;
+}
+
+.occasion-card:hover .occasion-card-link {
+  gap: 0.65rem;
+  color: #b08930;
+}
+
+.occasion-card:hover .occasion-card-link .lucide,
+.occasion-card:hover .occasion-card-link svg {
+  transform: translateX(2px);
+}
+
+/* Occasion Gallery (image grid for occasion pages) */
+.occasion-gallery {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 14rem;
+}
+
+.occasion-gallery-item {
+  position: relative;
+  border-radius: 0.85rem;
+  overflow: hidden;
+  border: 1px solid rgba(16, 35, 61, 0.1);
+}
+
+.occasion-gallery-item:nth-child(1) {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.occasion-gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 480ms ease;
+}
+
+.occasion-gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+/* Reels Grid */
+.reels-grid {
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  gap: 2rem;
+  justify-items: center;
+  width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .reels-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (min-width: 1440px) {
+  .reels-grid {
+    grid-template-columns: repeat(4, 1fr) !important;
+  }
+}
+
+.reel-item {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  transition: transform 300ms ease, box-shadow 300ms ease;
+  width: 100%;
+  max-width: 450px; /* Keep it look like a phone screen even on tablet */
+  margin-bottom: 1rem;
+}
+
+.reel-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(16, 35, 61, 0.08);
+}
+
+.reel-item iframe {
+  width: 100% !important;
+  border: none !important;
+  border-radius: 12px !important;
+  margin: 0 !important;
+}
+
+
+/* Contact CTA Section */
+.contact-cta-section {
+  background:
+    linear-gradient(135deg, rgba(8, 22, 38, 0.98) 0%, rgba(16, 42, 71, 0.98) 100%);
+  position: relative;
+}
+
+.contact-cta-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    radial-gradient(circle at 25% 50%, rgba(200, 164, 93, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 75% 50%, rgba(200, 164, 93, 0.06) 0%, transparent 50%);
+}
+
+.contact-cta-section > div {
+  position: relative;
+  z-index: 1;
+}
+
+.contact-cta-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.contact-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.85rem 1.6rem;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: #fff;
+  background: rgba(255, 255, 255, 0.08);
+  transition: background 240ms ease, border-color 240ms ease, transform 240ms ease;
+}
+
+.contact-cta-btn:hover {
+  background: rgba(255, 255, 255, 0.14);
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+.contact-cta-btn.whatsapp {
+  border-color: rgba(37, 211, 102, 0.5);
+  background: rgba(37, 211, 102, 0.12);
+  color: #25D366;
+}
+
+.contact-cta-btn.whatsapp:hover {
+  background: rgba(37, 211, 102, 0.22);
+  border-color: rgba(37, 211, 102, 0.7);
+}
+
+.contact-cta-btn .lucide,
+.contact-cta-btn svg {
+  width: 20px;
+  height: 20px;
+  stroke-width: 2;
+}
+
+
 
 .occasion-tile {
   display: grid;
@@ -1375,6 +1611,16 @@ main>section:first-of-type .btn-outline:hover {
     width: 18px;
     height: 18px;
   }
+
+  .occasion-gallery {
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 12rem;
+  }
+
+  .occasion-gallery-item:nth-child(1) {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
 }
 
 @media (max-width: 640px) {
@@ -1430,8 +1676,8 @@ main>section:first-of-type .btn-outline:hover {
   }
 
   #experiences .exp-card {
-    width: calc((100vw - 4.5rem) / 2);
-    min-width: 150px;
+    width: calc(100vw - 3.5rem);
+    min-width: 240px;
   }
 
   .exp-control-btn {

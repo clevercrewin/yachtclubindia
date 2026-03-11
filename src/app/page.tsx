@@ -147,7 +147,7 @@ function OccasionsSection() {
   const occasions = [
     { title: 'Proposals', image: '/images/s1.jpg', href: '/occasions/proposals' },
     { title: 'Birthdays', image: '/images/s2.jpg', href: '/occasions/birthdays' },
-    { title: 'Romantic Getaways', image: '/images/s3.jpg', href: '/occasions/proposals' },
+    { title: 'Romantic Getaways', image: '/images/s3.jpg', href: '/occasions/romantic-getaways' },
     { title: 'Weddings', image: '/images/s4.jpg', href: '/occasions/weddings' },
     { title: 'Corporate', image: '/images/s5.jpg', href: '/occasions/corporate' },
   ];
@@ -259,6 +259,15 @@ function TestimonialsSection() {
 }
 
 function InstagramSection() {
+  const reelIds = ['DSjo5HTEwY7', 'DNVSbGsTMGl', 'DUDpRS1CLHa', 'DVsgxz4k6rX'];
+
+  useEffect(() => {
+     // Process Instagram embeds if they exist
+     if (typeof window !== 'undefined' && (window as any).instgrm) {
+         (window as any).instgrm.Embeds.process();
+     }
+  }, []);
+
   return (
     <section className="section-surface py-28">
       <div className="mx-auto max-w-7xl px-6" data-reveal="true">
@@ -266,10 +275,14 @@ function InstagramSection() {
           <h2 className="section-title no-divider">Instagram</h2>
           <Button href="#" variant="outline" icon={Instagram}>Follow @yachtclubindia_</Button>
         </div>
-        <div className="mt-8 grid grid-cols-2 gap-4 lg:grid-cols-4">
-          {[...Array(8)].map((_, i) => (
-            <div key={i} className="ig-ph"></div>
-          ))}
+        <div className="reels-grid mt-12">
+            {reelIds.map((id) => (
+                <div key={id} className="reel-item">
+                    <script async src="//www.instagram.com/embed.js"></script><div dangerouslySetInnerHTML={{
+                        __html: `<blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/${id}/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"></blockquote>`
+                    }} />
+                </div>
+            ))}
         </div>
       </div>
     </section>
@@ -355,3 +368,4 @@ export default function Home() {
     </main>
   );
 }
+

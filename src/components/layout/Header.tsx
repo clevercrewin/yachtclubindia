@@ -56,22 +56,23 @@ export default function Header() {
 
                     <ul className="hidden items-center gap-8 lg:flex">
                         <li><Link className="nav-link is-active" href="/">Home</Link></li>
-                        <li><Link className="nav-link" href="/experiences">Experiences</Link></li>
-                        <li><Link className="nav-link" href="/fleet">Fleet</Link></li>
-                        {/* Occasions hidden for now
                         <li className="relative group">
                             <button className="nav-link nav-trigger" aria-haspopup="true">
-                                <span>Occasions</span>
+                                <span>Experiences</span>
                                 <ChevronDown />
                             </button>
-                            <div className="dropdown-panel absolute left-0 top-9 hidden min-w-52 rounded-xl border border-black/10 bg-white/95 p-2 group-hover:block group-focus-within:block">
+                            <div className="dropdown-panel absolute left-0 top-9 hidden min-w-52 rounded-xl border border-black/10 bg-white/95 p-2 shadow-lg backdrop-blur-sm group-hover:block group-focus-within:block">
+                                <Link href="/experiences" className="dropdown-item">All Experiences</Link>
+                                <div className="my-1 h-px bg-black/8"></div>
+                                <p className="px-2 pt-1 pb-1 text-[0.68rem] uppercase tracking-[0.14em] text-[#8a9bb0]">Occasions at Sea</p>
                                 <Link href="/occasions/proposals" className="dropdown-item">Proposals</Link>
                                 <Link href="/occasions/birthdays" className="dropdown-item">Birthdays</Link>
+                                <Link href="/occasions/romantic-getaways" className="dropdown-item">Romantic Getaways</Link>
                                 <Link href="/occasions/weddings" className="dropdown-item">Weddings</Link>
                                 <Link href="/occasions/corporate" className="dropdown-item">Corporate</Link>
                             </div>
                         </li>
-                        */}
+                        <li><Link className="nav-link" href="/fleet">Fleet</Link></li>
                         <li><Link className="nav-link" href="/#about">About</Link></li>
                         <li><Link className="nav-link" href="/#contact">Contact</Link></li>
                     </ul>
@@ -104,28 +105,27 @@ export default function Header() {
                     <div className="mobile-menu-panel rounded-2xl border border-black/10 bg-white/95 p-5">
                         <p className="mobile-menu-label">Navigation</p>
                         <Link className="mobile-link" href="/" onClick={closeMenu}>Home</Link>
-                        <Link className="mobile-link" href="/experiences" onClick={closeMenu}>Experiences</Link>
-                        <Link className="mobile-link" href="/fleet" onClick={closeMenu}>Fleet</Link>
-                        {/* Occasions hidden for now
                         <div className="mobile-dropdown">
                             <button
                                 className="mobile-link mobile-drop-trigger"
                                 type="button"
                                 aria-expanded={isOccasionsOpen}
-                                aria-controls="mobile-occ-list"
+                                aria-controls="mobile-exp-list"
                                 onClick={toggleOccasions}
                             >
-                                <span>Occasions</span>
+                                <span>Experiences</span>
                                 <ChevronDown />
                             </button>
-                            <div id="mobile-occ-list" className="mobile-drop-list" hidden={!isOccasionsOpen}>
+                            <div id="mobile-exp-list" className="mobile-drop-list" hidden={!isOccasionsOpen}>
+                                <Link href="/experiences" className="mobile-sub-link" onClick={closeMenu}>All Experiences</Link>
                                 <Link href="/occasions/proposals" className="mobile-sub-link" onClick={closeMenu}>Proposals</Link>
                                 <Link href="/occasions/birthdays" className="mobile-sub-link" onClick={closeMenu}>Birthdays</Link>
+                                <Link href="/occasions/romantic-getaways" className="mobile-sub-link" onClick={closeMenu}>Romantic Getaways</Link>
                                 <Link href="/occasions/weddings" className="mobile-sub-link" onClick={closeMenu}>Weddings</Link>
                                 <Link href="/occasions/corporate" className="mobile-sub-link" onClick={closeMenu}>Corporate</Link>
                             </div>
                         </div>
-                        */}
+                        <Link className="mobile-link" href="/fleet" onClick={closeMenu}>Fleet</Link>
                         <Link className="mobile-link" href="/#about" onClick={closeMenu}>About</Link>
                         <Link className="mobile-link" href="/#contact" onClick={closeMenu}>Contact</Link>
                         <div className="mt-4 grid grid-cols-2 gap-3">

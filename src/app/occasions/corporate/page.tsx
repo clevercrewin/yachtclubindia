@@ -2,8 +2,17 @@
 
 import { useEffect } from 'react';
 import Image from 'next/image';
-import { Anchor, Check } from 'lucide-react';
+import { Anchor, Phone, MessageCircle, Play } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+
+const galleryImages = [
+    { src: '/images/yacht/blue-diamond/blue-diamond-1.jpg', alt: 'Blue Diamond Corporate' },
+    { src: '/images/yacht/blue-diamond/blue-diamond-2.jpg', alt: 'Blue Diamond Corporate 2' },
+    { src: '/images/yacht/blue-diamond/blue-diamond-3.jpg', alt: 'Blue Diamond Corporate 3' },
+    { src: '/images/yacht/blue-diamond/blue-diamond-4.jpg', alt: 'Blue Diamond Corporate 4' },
+    { src: '/images/yacht/blue-diamond/blue-diamond-5.jpg', alt: 'Blue Diamond Corporate 5' },
+    { src: '/images/yacht/blue-diamond/blue-diamond-6.jpg', alt: 'Blue Diamond Corporate 6' },
+];
 
 export default function CorporatePage() {
     useEffect(() => {
@@ -18,6 +27,12 @@ export default function CorporatePage() {
         }, { threshold: 0.1 });
 
         revealEls.forEach((el) => io.observe(el));
+
+        // Process Instagram embeds
+        if (typeof window !== 'undefined' && (window as any).instgrm) {
+            (window as any).instgrm.Embeds.process();
+        }
+
         return () => io.disconnect();
     }, []);
 
@@ -44,93 +59,51 @@ export default function CorporatePage() {
 
             <section className="section-surface py-24">
                 <div className="mx-auto max-w-7xl px-6" data-reveal="true">
-                    <h2 className="section-title">Corporate Packages</h2>
-                    <p className="section-subtitle">Three formats tailored for executive meetings, partner hosting, and premium team offsites.</p>
+                    <h2 className="section-title">Gallery</h2>
+                    <p className="section-subtitle">Premium corporate hosting moments — from executive retreats to client entertainment at sea.</p>
 
-                    <div className="occasion-package-grid mt-12 grid gap-8 lg:grid-cols-3">
-                        <article className="occasion-package-card flex flex-col overflow-hidden rounded-2xl bg-white border border-black/5 shadow-sm transition-transform hover:-translate-y-1">
-                            <div className="relative h-60 w-full">
-                                <Image src="/images/c6.jpg" alt="Corporate compact package" fill className="object-fill" />
+                    <div className="occasion-gallery mt-12">
+                        {galleryImages.map((img, idx) => (
+                            <div key={idx} className="occasion-gallery-item">
+                                <Image src={img.src} alt={img.alt} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover" />
                             </div>
-                            <div className="occasion-package-body p-8 flex flex-col flex-grow">
-                                <h3 className="text-xl font-bold font-jakarta text-textMain mb-2">Executive Compact</h3>
-                                <p className="text-textMuted mb-6 flex-grow">Focused private cruise for smaller leadership teams with meeting-friendly deck setup.</p>
-                                <ul className="occasion-package-list space-y-3 mb-8">
-                                    <li className="flex items-start gap-2 text-sm font-medium">
-                                        <Check className="w-5 h-5 text-gold shrink-0" />
-                                        <span>Boardroom-style arrangement</span>
-                                    </li>
-                                    <li className="flex items-start gap-2 text-sm font-medium">
-                                        <Check className="w-5 h-5 text-gold shrink-0" />
-                                        <span>Premium refreshment service</span>
-                                    </li>
-                                    <li className="flex items-start gap-2 text-sm font-medium">
-                                        <Check className="w-5 h-5 text-gold shrink-0" />
-                                        <span>Dedicated host</span>
-                                    </li>
-                                </ul>
-                                <div className="pt-6 border-t border-black/5 flex items-center justify-between mt-auto">
-                                    <span className="font-semibold text-textMain">Starting from ₹____</span>
-                                    <Button href="/booking" variant="gold" icon={Anchor}>Book Now</Button>
-                                </div>
-                            </div>
-                        </article>
+                        ))}
+                    </div>
+                </div>
+            </section>
 
-                        <article className="occasion-package-card flex flex-col overflow-hidden rounded-2xl bg-white border border-black/5 shadow-sm transition-transform hover:-translate-y-1">
-                            <div className="relative h-60 w-full">
-                                <Image src="/images/c3.jpg" alt="Corporate signature package" fill className="object-fill" />
-                            </div>
-                            <div className="occasion-package-body p-8 flex flex-col flex-grow">
-                                <h3 className="text-xl font-bold font-jakarta text-textMain mb-2">Signature Corporate</h3>
-                                <p className="text-textMuted mb-6 flex-grow">Sunset networking cruise with curated hospitality and guest-first circulation planning.</p>
-                                <ul className="occasion-package-list space-y-3 mb-8">
-                                    <li className="flex items-start gap-2 text-sm font-medium">
-                                        <Check className="w-5 h-5 text-gold shrink-0" />
-                                        <span>Sunset premium route</span>
-                                    </li>
-                                    <li className="flex items-start gap-2 text-sm font-medium">
-                                        <Check className="w-5 h-5 text-gold shrink-0" />
-                                        <span>Networking-led layout</span>
-                                    </li>
-                                    <li className="flex items-start gap-2 text-sm font-medium">
-                                        <Check className="w-5 h-5 text-gold shrink-0" />
-                                        <span>Branded touchpoints</span>
-                                    </li>
-                                </ul>
-                                <div className="pt-6 border-t border-black/5 flex items-center justify-between mt-auto">
-                                    <span className="font-semibold text-textMain">Starting from ₹____</span>
-                                    <Button href="/booking" variant="gold" icon={Anchor}>Book Now</Button>
-                                </div>
-                            </div>
-                        </article>
+            {/* Reels Section */}
+            <section className="bg-[#F4F7FB] py-24">
+                <div className="mx-auto max-w-7xl px-6" data-reveal="true">
+                    <h2 className="section-title">Reels</h2>
+                    <p className="section-subtitle">Watch real corporate event highlights from our yacht charters.</p>
 
-                        <article className="occasion-package-card flex flex-col overflow-hidden rounded-2xl bg-white border border-black/5 shadow-sm transition-transform hover:-translate-y-1">
-                            <div className="relative h-60 w-full">
-                                <Image src="/images/c8.jpg" alt="Corporate grand package" fill className="object-fill" />
+                    <div className="reels-grid mt-12">
+                        {['DSjo5HTEwY7', 'DNVSbGsTMGl', 'DUDpRS1CLHa', 'DVsgxz4k6rX'].map((id) => (
+                            <div key={id} className="reel-item">
+                                <script async src="//www.instagram.com/embed.js"></script><div dangerouslySetInnerHTML={{
+                                    __html: `<blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/${id}/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"></blockquote>`
+                                }} />
                             </div>
-                            <div className="occasion-package-body p-8 flex flex-col flex-grow">
-                                <h3 className="text-xl font-bold font-jakarta text-textMain mb-2">Premier Corporate Charter</h3>
-                                <p className="text-textMuted mb-6 flex-grow">Full-scale premium charter for client entertainment, product moments, and celebration nights.</p>
-                                <ul className="occasion-package-list space-y-3 mb-8">
-                                    <li className="flex items-start gap-2 text-sm font-medium">
-                                        <Check className="w-5 h-5 text-gold shrink-0" />
-                                        <span>Extended charter plan</span>
-                                    </li>
-                                    <li className="flex items-start gap-2 text-sm font-medium">
-                                        <Check className="w-5 h-5 text-gold shrink-0" />
-                                        <span>Premium dining options</span>
-                                    </li>
-                                    <li className="flex items-start gap-2 text-sm font-medium">
-                                        <Check className="w-5 h-5 text-gold shrink-0" />
-                                        <span>Concierge execution</span>
-                                    </li>
-                                </ul>
-                                <div className="pt-6 border-t border-black/5 flex items-center justify-between mt-auto">
-                                    <span className="font-semibold text-textMain">Starting from ₹____</span>
-                                    <Button href="/booking" variant="gold" icon={Anchor}>Book Now</Button>
-                                </div>
-                            </div>
-                        </article>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* Get in Touch CTA */}
+            <section className="contact-cta-section py-24">
+                <div className="mx-auto max-w-4xl px-6 text-center" data-reveal="true">
+                    <h2 className="section-title text-white">Get in Touch</h2>
+                    <p className="section-subtitle" style={{ color: 'rgba(255,255,255,0.7)' }}>Have questions or ready to plan your corporate event at sea? Reach out to us directly.</p>
+                    <div className="contact-cta-actions mt-10">
+                        <a href="tel:+91________" className="contact-cta-btn">
+                            <Phone className="w-5 h-5" />
+                            <span>+91 ________</span>
+                        </a>
+                        <a href="#" className="contact-cta-btn whatsapp">
+                            <MessageCircle className="w-5 h-5" />
+                            <span>Chat on WhatsApp</span>
+                        </a>
                     </div>
                 </div>
             </section>
@@ -151,3 +124,10 @@ export default function CorporatePage() {
         </main>
     );
 }
+
+
+
+
+
+
+
