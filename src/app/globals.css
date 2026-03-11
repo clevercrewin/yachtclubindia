@@ -484,25 +484,7 @@ main>section:first-of-type .btn-outline:hover {
   margin-right: auto;
 }
 
-.fade-edge-left,
-.fade-edge-right {
-  pointer-events: none;
-  position: absolute;
-  z-index: 10;
-  top: 0;
-  height: 100%;
-  width: 3.2rem;
-}
 
-.fade-edge-left {
-  left: 0;
-  background: linear-gradient(90deg, var(--bg-alt) 15%, rgba(238, 243, 248, 0) 100%);
-}
-
-.fade-edge-right {
-  right: 0;
-  background: linear-gradient(270deg, var(--bg-alt) 15%, rgba(238, 243, 248, 0) 100%);
-}
 
 .no-scrollbar::-webkit-scrollbar {
   display: none;

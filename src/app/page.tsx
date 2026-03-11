@@ -77,8 +77,6 @@ function ExperiencesSection() {
         </div>
 
         <div className="relative" data-reveal="true">
-          <div className="fade-edge-left"></div>
-          <div className="fade-edge-right"></div>
           <div ref={trackRef} className="flex gap-6 overflow-x-auto pb-2 pr-6 no-scrollbar" style={{ scrollSnapType: 'x mandatory' }}>
             {experiencesData.map((exp) => (
               <ExperienceCard key={exp.id} {...exp} />
