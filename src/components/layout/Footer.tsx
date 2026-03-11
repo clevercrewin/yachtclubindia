@@ -12,7 +12,7 @@ export default function Footer() {
     }
 
     return (
-        <footer id="contact" className="footer-dark border-t border-white/12 py-16">
+        <footer className="footer-dark border-t border-white/12 py-16">
             <div className="footer-divider mx-auto mb-10 h-px w-full max-w-7xl"></div>
             <div className="footer-grid mx-auto grid max-w-7xl gap-10 px-6 md:grid-cols-3">
                 <div>

@@ -73,8 +73,8 @@ export default function Header() {
                             </div>
                         </li>
                         <li><Link className="nav-link" href="/fleet">Fleet</Link></li>
-                        <li><Link className="nav-link" href="/#about">About</Link></li>
-                        <li><Link className="nav-link" href="/#contact">Contact</Link></li>
+                        {/* <li><Link className="nav-link" href="/#about">About</Link></li> */}
+                        <li><Link className="nav-link" href="/contact">Contact</Link></li>
                     </ul>
 
                     <div className="hidden items-center gap-3 lg:flex">
@@ -126,8 +126,8 @@ export default function Header() {
                             </div>
                         </div>
                         <Link className="mobile-link" href="/fleet" onClick={closeMenu}>Fleet</Link>
-                        <Link className="mobile-link" href="/#about" onClick={closeMenu}>About</Link>
-                        <Link className="mobile-link" href="/#contact" onClick={closeMenu}>Contact</Link>
+                        {/* <Link className="mobile-link" href="/#about" onClick={closeMenu}>About</Link> */}
+                        <Link className="mobile-link" href="/contact" onClick={closeMenu}>Contact</Link>
                         <div className="mt-4 grid grid-cols-2 gap-3">
                             <Link href="/fleet" className="btn-gold btn-icon text-center" onClick={closeMenu}><Anchor /><span>Book Now</span></Link>
                             <a href="https://wa.me/918147331594" target="_blank" rel="noopener noreferrer" className="btn-outline btn-icon text-center"><MessageCircle /><span>Chat</span></a>
